@@ -3,23 +3,597 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Danqiong Dai | Academic Website</title>
+
+  <meta name="description"
+        content="Danqiong Dai is a postdoctoral researcher at Western University working on land surface modelling, regional climate modelling, and human-Earth system interactions.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #3f2a78;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navigation */
+    nav {
+      border-bottom: 1px solid #e8e8e8;
+      background: rgba(255, 255, 255, 0.97);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-name {
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      margin-left: 22px;
+      color: #444;
+      font-size: 15px;
+    }
+
+    /* Main */
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 70px 24px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 45px 0 70px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 52px;
+      margin: 0 0 10px;
+      font-weight: 500;
+      letter-spacing: -1px;
+    }
+
+    .hero .position {
+      font-size: 21px;
+      margin: 0 0 4px;
+    }
+
+    .hero .institution {
+      font-size: 18px;
+      color: #666;
+      margin: 0 0 25px;
+    }
+
+    .keywords {
+      color: #555;
+      font-size: 16px;
+      max-width: 750px;
+    }
+
+    .social-links {
+      margin-top: 25px;
+    }
+
+    .social-links a {
+      margin-right: 20px;
+      font-weight: 500;
+    }
+
+    /* Sections */
+    section {
+      padding: 45px 0;
+      border-top: 1px solid #eee;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-size: 19px;
+      margin-bottom: 4px;
+    }
+
+    .muted {
+      color: #666;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .research-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .research-card h3 {
+      margin-top: 0;
+    }
+
+    .experience-item {
+      margin-bottom: 30px;
+    }
+
+    .experience-item p {
+      margin: 3px 0;
+    }
+
+    .publication {
+      margin-bottom: 22px;
+    }
+
+    .publication p {
+      margin: 0;
+    }
+
+    .publication-title {
+      font-weight: 600;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f3f1f8;
+      padding: 5px 10px;
+      margin: 4px 5px 4px 0;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    footer {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 24px 50px;
+      color: #777;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Danqiong Dai</h1>
 
-  <p>Postdoctoral Researcher at Western University</p>
+<nav>
+  <div class="nav-container">
+    <div class="nav-name">Danqiong Dai</div>
 
-  <h2>Research</h2>
-  <p>
-    Land Surface Modeling · Hydrology · Boreal Wetlands ·
-    Groundwater–Permafrost Interactions
-  </p>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#presentations">Presentations</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
-  <h2>About Me</h2>
-  <p>
-    Welcome to my academic website.
-  </p>
+
+<main>
+
+  <!-- HERO -->
+
+  <div class="hero">
+
+    <h1>Danqiong Dai, Ph.D.</h1>
+
+    <p class="position">
+      Postdoctoral Fellow
+    </p>
+
+    <p class="institution">
+      Department of Physics and Astronomy · Western University
+    </p>
+
+    <p class="keywords">
+      Land Surface Modelling · Regional Climate Modelling ·
+      Human–Earth System Modelling · Hydrological Cycle ·
+      Human–Climate Interactions
+    </p>
+
+    <div class="social-links">
+      <a href="mailto:danqiong.dai@uwo.ca">Email</a>
+
+      <a href="https://www.linkedin.com/in/danqiong-dai-079a16256/"
+         target="_blank">
+         LinkedIn
+      </a>
+
+      <a href="https://github.com/Danqiong-Dai/"
+         target="_blank">
+         GitHub
+      </a>
+    </div>
+
+  </div>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2>About</h2>
+
+    <p>
+      I am a postdoctoral researcher in the Department of Physics and
+      Astronomy at Western University. My research focuses on land
+      surface modelling, regional climate modelling, and human–Earth
+      system interactions.
+    </p>
+
+    <p>
+      A major focus of my research is understanding how human
+      activities, particularly agricultural irrigation and groundwater
+      pumping, influence the terrestrial water cycle. I am also
+      interested in interactions between human management activities
+      and climate extremes.
+    </p>
+
+    <p>
+      My research combines process-based land surface and regional
+      climate models with observational datasets and computational
+      approaches to investigate hydrological and climate processes.
+    </p>
+
+  </section>
+
+
+  <!-- RESEARCH -->
+
+  <section id="research">
+
+    <h2>Research Interests</h2>
+
+    <div class="research-grid">
+
+      <div class="research-card">
+        <h3>Land Surface Modelling</h3>
+        <p>
+          Improving the representation of land-surface and hydrological
+          processes in numerical models.
+        </p>
+      </div>
+
+      <div class="research-card">
+        <h3>Regional Climate Modelling</h3>
+        <p>
+          Understanding regional climate processes and evaluating
+          climate-model simulations.
+        </p>
+      </div>
+
+      <div class="research-card">
+        <h3>Human–Earth System Modelling</h3>
+        <p>
+          Representing human activities and their interactions with
+          terrestrial water and climate systems.
+        </p>
+      </div>
+
+      <div class="research-card">
+        <h3>Groundwater & Irrigation</h3>
+        <p>
+          Investigating the impacts of groundwater pumping and
+          agricultural irrigation on the terrestrial hydrological cycle.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE -->
+
+  <section id="experience">
+
+    <h2>Research Experience</h2>
+
+    <div class="experience-item">
+      <h3>Postdoctoral Fellow</h3>
+      <p>Western University</p>
+      <p class="muted">2024 – Present · London, Ontario, Canada</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Visiting Researcher</h3>
+      <p>National Center for Atmospheric Research (NCAR)</p>
+      <p class="muted">2024 · Boulder, Colorado, USA</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Postdoctoral Fellow</h3>
+      <p>Global Institute for Water Security, University of Saskatchewan</p>
+      <p class="muted">2023 – 2024 · Saskatoon, Saskatchewan, Canada</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Visiting Researcher</h3>
+      <p>National Center for Atmospheric Research (NCAR)</p>
+      <p class="muted">2023 · Boulder, Colorado, USA</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Research Assistant</h3>
+      <p>Global Institute for Water Security, University of Saskatchewan</p>
+      <p class="muted">2022 – 2023</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Visiting Doctoral Student</h3>
+      <p>Global Institute for Water Security, University of Saskatchewan</p>
+      <p class="muted">2021 – 2022</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Doctoral Research Assistant</h3>
+      <p>Institute of Atmospheric Physics, Chinese Academy of Sciences</p>
+      <p class="muted">2017 – 2021 · Beijing, China</p>
+    </div>
+
+  </section>
+
+
+  <!-- EDUCATION -->
+
+  <section id="education">
+
+    <h2>Education</h2>
+
+    <div class="experience-item">
+      <h3>Ph.D. in Atmospheric Sciences</h3>
+      <p>
+        Institute of Atmospheric Physics,
+        Chinese Academy of Sciences
+      </p>
+      <p class="muted">2016 – 2023 · Beijing, China</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>B.S. in Atmospheric Physics</h3>
+      <p>
+        Nanjing University of Information Science and Technology
+      </p>
+      <p class="muted">2012 – 2016 · Nanjing, China</p>
+    </div>
+
+  </section>
+
+
+  <!-- PUBLICATIONS -->
+
+  <section id="publications">
+
+    <h2>Publications</h2>
+
+    <div class="publication">
+      <p class="publication-title">
+        Implementation and evaluation of groundwater-fed irrigation
+        in Noah-MP model using observational data over the North China Plain
+      </p>
+      <p>Dai, D., et al.</p>
+      <p class="muted">In revision for Earth's Future</p>
+    </div>
+
+    <div class="publication">
+      <p class="publication-title">
+        Automated Calibration of Noah-MP Land Surface Model for
+        Improved Irrigation Representation in the North China Plain
+      </p>
+      <p>
+        Dai, D., Zhenhua Li, Fei Chen, Cenlin He,
+        Prasanth Valayamkunnath, Yanping Li, et al.
+      </p>
+      <p class="muted">Journal of Hydrology · Accepted</p>
+    </div>
+
+    <div class="publication">
+      <p class="publication-title">
+        Evaluation of the WRF physics ensemble using a multivariable
+        integrated evaluation approach over the Haihe River Basin
+        in northern China
+      </p>
+      <p>Dai, D., Chen, L., Ma, Z., and Xu, Z.</p>
+      <p class="muted">Climate Dynamics · 2021 · 57(1), 557–575</p>
+    </div>
+
+    <div class="publication">
+      <p class="publication-title">
+        Water budget variation, groundwater depletion, and water
+        resource vulnerability in the Haihe River Basin during
+        the new millennium
+      </p>
+      <p>Zheng, Z., Ning, L., Dai, D., et al.</p>
+      <p class="muted">
+        Physics and Chemistry of the Earth, Parts A/B/C · 2022
+      </p>
+    </div>
+
+    <div class="publication">
+      <p class="publication-title">
+        Evaluation of water use efficiency and optimal irrigation
+        quantity of spring maize in Hetao Irrigation District using
+        the Noah-MP Land Surface Model
+      </p>
+      <p>Huang, Y., Zhang, Z., Li, Z., Dai, D., and Li, Y.</p>
+      <p class="muted">Agricultural Water Management · 2022</p>
+    </div>
+
+    <div class="publication">
+      <p class="publication-title">
+        Effects of the surface coupling strength in the WRF/Noah-MP
+        model on regional climate simulations over China
+      </p>
+      <p>Zhang, X., Chen, L., Ma, Z., Duan, J., Dai, D., and Zhang, H.</p>
+      <p class="muted">Climate Dynamics · 2022</p>
+    </div>
+
+  </section>
+
+
+  <!-- PRESENTATIONS -->
+
+  <section id="presentations">
+
+    <h2>Selected Presentations</h2>
+
+    <p>
+      <strong>CMOS Meeting, 2024</strong><br>
+      Detecting Canadian Wetland Surface Water Extent:
+      integrating deep learning, remote sensing data and
+      high resolution Land Surface Model.
+    </p>
+
+    <p>
+      <strong>AGU Fall Meeting, 2023</strong><br>
+      Quantifying irrigation activities in North China Plain
+      using census data and Noah-MP model.
+    </p>
+
+    <p>
+      <strong>First International Noah-MP Annual Users' Workshop, 2023</strong><br>
+      Modeling irrigation activities in North China Plain:
+      from a realistic perspective.
+    </p>
+
+  </section>
+
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <h2>Technical Skills</h2>
+
+    <h3>Programming</h3>
+
+    <div>
+      <span class="tag">Python</span>
+      <span class="tag">FORTRAN</span>
+      <span class="tag">NCL</span>
+      <span class="tag">MATLAB</span>
+      <span class="tag">Bash</span>
+    </div>
+
+    <h3>Earth System & Hydrological Models</h3>
+
+    <div>
+      <span class="tag">WRF</span>
+      <span class="tag">HRLDAS</span>
+      <span class="tag">Noah-MP</span>
+      <span class="tag">CLM</span>
+      <span class="tag">CLASSIC</span>
+      <span class="tag">CESM</span>
+      <span class="tag">WRF-Hydro</span>
+      <span class="tag">DNDC</span>
+    </div>
+
+    <h3>Python Ecosystem</h3>
+
+    <div>
+      <span class="tag">Pandas</span>
+      <span class="tag">NumPy</span>
+      <span class="tag">Xarray</span>
+      <span class="tag">GeoPandas</span>
+      <span class="tag">Cartopy</span>
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+      Department of Physics and Astronomy<br>
+      Western University<br>
+      London, Ontario, Canada
+    </p>
+
+    <p>
+      Email:
+      <a href="mailto:danqiong.dai@uwo.ca">
+        danqiong.dai@uwo.ca
+      </a>
+    </p>
+
+    <p>
+      <a href="https://www.linkedin.com/in/danqiong-dai-079a16256/"
+         target="_blank">
+         LinkedIn
+      </a>
+      &nbsp; · &nbsp;
+      <a href="https://github.com/Danqiong-Dai/"
+         target="_blank">
+         GitHub
+      </a>
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+  © 2026 Danqiong Dai · Last updated September 2026
+</footer>
+
 </body>
 </html>
