@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-487YVVBZ8H"></script>
   <script>
@@ -10,10 +11,13 @@
 
   gtag('config', 'G-487YVVBZ8H');
   </script>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%233f2a78%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2231%22%20fill%3D%22white%22%3EDD%3C%2Ftext%3E%3C%2Fsvg%3E">
+
   <title>Danqiong Dai | Academic Website</title>
+  <meta name="author" content="Danqiong Dai">
+  <meta name="theme-color" content="#3f2a78">
 
   <meta name="description"
         content="Danqiong Dai is a postdoctoral researcher at Western University working on land surface modelling, regional climate modelling, and human-Earth system interactions.">
@@ -45,6 +49,32 @@
       text-decoration: underline;
     }
 
+    a:focus-visible {
+      outline: 3px solid #3f2a78;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 16px;
+      transform: translateY(-180%);
+      z-index: 200;
+      padding: 10px 16px;
+      color: #fff;
+      background: #3f2a78;
+      border-radius: 4px;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    [id] {
+      scroll-margin-top: 128px;
+    }
+
     /* Navigation */
     nav {
       border-bottom: 1px solid #e8e8e8;
@@ -57,8 +87,9 @@
     .nav-container {
       max-width: 1000px;
       margin: auto;
-      padding: 16px 24px;
+      padding: 12px 24px;
       display: flex;
+      gap: 12px 24px;
       justify-content: space-between;
       align-items: center;
     }
@@ -66,10 +97,20 @@
     .nav-name {
       font-size: 19px;
       font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4px 16px;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
-      margin-left: 22px;
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      white-space: nowrap;
       color: #444;
       font-size: 15px;
     }
@@ -78,12 +119,12 @@
     main {
       max-width: 900px;
       margin: auto;
-      padding: 70px 24px;
+      padding: 36px 24px;
     }
 
     /* Hero */
     .hero {
-      padding: 45px 0 70px;
+      padding: 36px 0 48px;
     }
 
     .hero h1 {
@@ -113,10 +154,16 @@
 
     .social-links {
       margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      align-items: center;
     }
 
     .social-links a {
-      margin-right: 20px;
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
       font-weight: 500;
     }
 
@@ -168,7 +215,30 @@
     }
 
     .publication {
-      margin-bottom: 22px;
+      padding: 20px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .publication-group {
+      margin: 32px 0 0;
+      color: #555;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .publication-title a {
+      text-decoration: underline;
+      text-decoration-color: #c5bcda;
+      text-underline-offset: 4px;
+    }
+
+    .publication-title a:hover {
+      text-decoration-color: currentColor;
+    }
+
+    .publication .muted {
+      margin-top: 6px;
+      font-size: 14px;
     }
 
     .publication p {
@@ -177,6 +247,9 @@
 
     .publication-title {
       font-weight: 600;
+      font-size: 17px;
+      line-height: 1.55;
+      margin: 0 0 8px;
     }
 
     .tag {
@@ -192,14 +265,28 @@
       max-width: 900px;
       margin: auto;
       padding: 30px 24px 50px;
-      color: #777;
+      color: #666;
       border-top: 1px solid #eee;
       font-size: 14px;
     }
 
     .visitor-map {
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin: 10px 0;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .visitor-map img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 960px) {
+      .nav-container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+      }
     }
     
     @media (max-width: 700px) {
@@ -211,8 +298,47 @@
         grid-template-columns: 1fr;
       }
 
+      .nav-container {
+        padding: 10px 20px;
+      }
+
       .nav-links {
-        display: none;
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto;
+        gap: 18px;
+        padding: 4px;
+        scrollbar-width: thin;
+      }
+
+      .nav-links a {
+        flex-shrink: 0;
+      }
+
+      main {
+        padding: 24px 20px;
+      }
+
+      .hero {
+        padding: 20px 0 32px;
+      }
+
+      .hero h1 {
+        font-size: clamp(32px, 8vw, 40px);
+        line-height: 1.2;
+      }
+
+      section {
+        padding: 32px 0;
+      }
+
+      footer {
+        padding: 24px 20px 36px;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
     }
   </style>
@@ -220,15 +346,18 @@
 
 <body>
 
-<nav>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<nav aria-label="Main navigation">
   <div class="nav-container">
-    <div class="nav-name">Danqiong Dai</div>
+    <a class="nav-name" href="#main-content">Danqiong Dai</a>
 
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#research">Research</a>
-      <a href="#experience">Experience</a>
       <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
       <a href="#presentations">Presentations</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
@@ -237,7 +366,7 @@
 </nav>
 
 
-<main>
+<main id="main-content" tabindex="-1">
 
   <!-- HERO -->
 
@@ -254,21 +383,21 @@
     </p>
 
     <p class="keywords">
-      Land Surface Modelling · Regional Climate Modelling ·
-      Human–Earth System Modelling · Hydrological Cycle ·
-      Human–Climate Interactions
+      Understanding how irrigation and groundwater pumping shape
+      the water cycle and regional climate.
     </p>
 
     <div class="social-links">
+      <a href="#publications">View publications</a>
       <a href="mailto:danqiong.dai@uwo.ca">Email</a>
 
       <a href="https://www.linkedin.com/in/danqiong-dai-079a16256/"
-         target="_blank">
+         target="_blank" rel="noopener noreferrer">
          LinkedIn
       </a>
 
       <a href="https://github.com/Danqiong-Dai/"
-         target="_blank">
+         target="_blank" rel="noopener noreferrer">
          GitHub
       </a>
     </div>
@@ -351,6 +480,59 @@
   </section>
 
 
+  <!-- PUBLICATIONS -->
+
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <h3 class="publication-group">Published articles</h3>
+
+    <article class="publication">
+      <h4 class="publication-title"><a href="https://doi.org/10.1016/j.jhydrol.2024.132362">Automated calibration of Noah-MP land surface model for improved irrigation representation in the North China Plain</a></h4>
+      <p><strong>Dai, D.</strong>, Li, Y., Chen, L., Chen, F., Li, Z., Zhang, Z., Valayamkunnath, P., Xu, L., He, C., and Ma, Z.</p>
+      <p class="muted">Journal of Hydrology · 2025 · 649, 132362</p>
+    </article>
+
+    <article class="publication">
+      <h4 class="publication-title"><a href="https://doi.org/10.1007/s00382-021-06129-5">Effects of the surface coupling strength in the WRF/Noah-MP model on regional climate simulations over China</a></h4>
+      <p>Zhang, X., Chen, L., Ma, Z., Duan, J., <strong>Dai, D.</strong>, and Zhang, H.</p>
+      <p class="muted">Climate Dynamics · 2022 · 59, 331–355</p>
+    </article>
+
+    <article class="publication">
+      <h4 class="publication-title"><a href="https://doi.org/10.1016/j.pce.2022.103141">Water budget variation, groundwater depletion, and water resource vulnerability in the Haihe River Basin during the new millennium</a></h4>
+      <p>Zheng, Z., Ning, L., <strong>Dai, D.</strong>, et al.</p>
+      <p class="muted">Physics and Chemistry of the Earth, Parts A/B/C · 2022 · 126, 103141</p>
+    </article>
+
+    <article class="publication">
+      <h4 class="publication-title"><a href="https://doi.org/10.1016/j.agwat.2022.107498">Evaluation of water use efficiency and optimal irrigation quantity of spring maize in Hetao Irrigation District using the Noah-MP Land Surface Model</a></h4>
+      <p>Huang, Y., Zhang, Z., Li, Z., <strong>Dai, D.</strong>, and Li, Y.</p>
+      <p class="muted">Agricultural Water Management · 2022 · 264, 107498</p>
+    </article>
+
+    <article class="publication">
+      <h4 class="publication-title"><a href="https://doi.org/10.1007/s00382-021-05723-x">Evaluation of the WRF physics ensemble using a multivariable integrated evaluation approach over the Haihe River Basin in northern China</a></h4>
+      <p><strong>Dai, D.</strong>, Chen, L., Ma, Z., and Xu, Z.</p>
+      <p class="muted">Climate Dynamics · 2021 · 57, 557–575</p>
+    </article>
+
+    <h3 class="publication-group">Manuscripts in revision</h3>
+
+    <article class="publication">
+      <h4 class="publication-title">Implementation and evaluation of groundwater-fed irrigation in Noah-MP model using observational data over the North China Plain</h4>
+      <p><strong>Dai, D.</strong>, et al.</p>
+      <p class="muted">In revision for Earth's Future</p>
+    </article>
+
+    <article class="publication">
+      <h4 class="publication-title">Towards Modelling Hydrological Processes of Boreal Forest Wetland: Implications from a High-Latitude Site and Multi-Model Analysis</h4>
+      <p><strong>Dai, D.</strong>, et al.</p>
+      <p class="muted">In revision · Planned submission to Journal of Hydrology</p>
+    </article>
+  </section>
+
+
   <!-- EXPERIENCE -->
 
   <section id="experience">
@@ -423,77 +605,6 @@
         Nanjing University of Information Science and Technology
       </p>
       <p class="muted">2012 – 2016 · Nanjing, China</p>
-    </div>
-
-  </section>
-
-
-  <!-- PUBLICATIONS -->
-
-  <section id="publications">
-
-    <h2>Publications</h2>
-
-    <div class="publication">
-      <p class="publication-title">
-        Implementation and evaluation of groundwater-fed irrigation
-        in Noah-MP model using observational data over the North China Plain
-      </p>
-      <p>Dai, D., et al.</p>
-      <p class="muted">In revision for Earth's Future</p>
-    </div>
-
-    <div class="publication">
-      <p class="publication-title">
-        Automated Calibration of Noah-MP Land Surface Model for
-        Improved Irrigation Representation in the North China Plain
-      </p>
-      <p>
-        Dai, D., Zhenhua Li, Fei Chen, Cenlin He,
-        Prasanth Valayamkunnath, Yanping Li, et al.
-      </p>
-      <p class="muted">Journal of Hydrology · Accepted</p>
-    </div>
-
-    <div class="publication">
-      <p class="publication-title">
-        Evaluation of the WRF physics ensemble using a multivariable
-        integrated evaluation approach over the Haihe River Basin
-        in northern China
-      </p>
-      <p>Dai, D., Chen, L., Ma, Z., and Xu, Z.</p>
-      <p class="muted">Climate Dynamics · 2021 · 57(1), 557–575</p>
-    </div>
-
-    <div class="publication">
-      <p class="publication-title">
-        Water budget variation, groundwater depletion, and water
-        resource vulnerability in the Haihe River Basin during
-        the new millennium
-      </p>
-      <p>Zheng, Z., Ning, L., Dai, D., et al.</p>
-      <p class="muted">
-        Physics and Chemistry of the Earth, Parts A/B/C · 2022
-      </p>
-    </div>
-
-    <div class="publication">
-      <p class="publication-title">
-        Evaluation of water use efficiency and optimal irrigation
-        quantity of spring maize in Hetao Irrigation District using
-        the Noah-MP Land Surface Model
-      </p>
-      <p>Huang, Y., Zhang, Z., Li, Z., Dai, D., and Li, Y.</p>
-      <p class="muted">Agricultural Water Management · 2022</p>
-    </div>
-
-    <div class="publication">
-      <p class="publication-title">
-        Effects of the surface coupling strength in the WRF/Noah-MP
-        model on regional climate simulations over China
-      </p>
-      <p>Zhang, X., Chen, L., Ma, Z., Duan, J., Dai, D., and Zhang, H.</p>
-      <p class="muted">Climate Dynamics · 2022</p>
     </div>
 
   </section>
@@ -590,12 +701,12 @@
 
     <p>
       <a href="https://www.linkedin.com/in/danqiong-dai-079a16256/"
-         target="_blank">
+         target="_blank" rel="noopener noreferrer">
          LinkedIn
       </a>
       &nbsp; · &nbsp;
       <a href="https://github.com/Danqiong-Dai/"
-         target="_blank">
+         target="_blank" rel="noopener noreferrer">
          GitHub
       </a>
     </p>
@@ -614,7 +725,8 @@
   </div>
 
   <p class="muted" style="font-size: 13px;">
-    Visitor map since September 2026
+    Visitor map since September 2026 ·
+    <a href="https://mapmyvisitors.com/web/1c8ec">View visitor statistics</a>
   </p>
 
   </section>
@@ -622,7 +734,7 @@
 
 
 <footer>
-  © 2026 Danqiong Dai · Last updated September 2026
+  © 2026 Danqiong Dai · Updated <time datetime="2026-10-01">October 1, 2026</time>
 </footer>
 
 </body>
